@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,8 +10,10 @@ public class Apple : MonoBehaviour
     {
         if(transform.position.y < bottomY){
             Destroy(this.gameObject);
+            //get a reference to the ApplePicker component of the main camera
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             apScript.AppleDestroyed();
         }
     }
 }
+
